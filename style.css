@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Poppins:wght@400;500&family=Varela+Round&display=swap');
+*{
+    font-family: 'Comfortaa', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Varela Round', sans-serif;
+    margin: 0;
+}
+body{
+    max-width: 90%;
+    margin: auto;
+    background-color:aliceblue;
+}
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    height:100px;
+    align-items: center;
+    position: sticky;
+}
+.navbar_left {
+    padding-left:10px;
+    padding-bottom:10px;
+}
+.navbar_left .logo {
+    font-size: 30px;
+}
+.navbar_left .logo span {
+    font-size: 40px;
+    font-weight: 800;
+    color: darkblue;
+}
+.navbar_right .navbar_items ul{ 
+    display: flex;
+}
+.navbar_right .navbar_items ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding-right:40px;
+}
+.navbar_right .navbar_items ul li a{
+    text-decoration: none;
+    color:darkblue;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.home{
+    display: flex;
+    flex-direction: row;
+    
+}
+.home_left {
+    background-color: aquamarine;
+    height: 500px;
+    width: 50%;
+}
+.home_right {
+    background-color:gold;
+    height: 500px;
+    width: 50%;
+}
+@keyframes scale {
+100%{
+      transform: scale(1);
+}
+}
+.container h1 span {
+    opacity: 0;
+    filter: blur(4px);
+    font-size: 2.5em;
+    color: darkblue;
+    display:flex;
+    text-align: center;
+} 
+h1 {
+    max-width: 40ch;
+    transform: scale(0.94);
+    animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+span:nth-child(1) {
+    animation: fade-in 1s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+@keyframes fade-in {
+    100% {
+      opacity: 1;
+      filter: blur(0);
+    }
+}
