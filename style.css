@@ -1,21 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Poppins:wght@400;500&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 *{
     font-family: 'Comfortaa', sans-serif;
     font-family: 'Poppins', sans-serif;
     font-family: 'Varela Round', sans-serif;
     margin: 0;
+    --main-color:#B91E04;
+    --text-color:#fff;
 }
 body{
     max-width: 90%;
     margin: auto;
-    background-color:aliceblue;
+    background-color:black;
 }
 .navbar{
     display:flex;
     justify-content:space-between;
     height:100px;
     align-items: center;
-    position: sticky;
 }
 .navbar_left {
     padding-left:10px;
@@ -23,11 +25,12 @@ body{
 }
 .navbar_left .logo {
     font-size: 30px;
+    color: var(--text-color);
 }
 .navbar_left .logo span {
     font-size: 40px;
     font-weight: 800;
-    color: darkblue;
+    color:var(--main-color);
 }
 .navbar_right .navbar_items ul{ 
     display: flex;
@@ -39,49 +42,91 @@ body{
 }
 .navbar_right .navbar_items ul li a{
     text-decoration: none;
-    color:darkblue;
+    color:var(--main-color);
     text-transform: uppercase;
     font-weight: 700;
 }
-.home{
-    display: flex;
-    flex-direction: row;
+.navbar_right .navbar_items ul li a:hover {
+    color:var(--text-color);
+}
+.navbar_right .navbar_items ul li a.active{
+    color:var(--text-color);
+}
+.page{
+    margin: auto;
+}
+.page_1{
+    width: 100%;
+    height: 45em;
+    text-align: center;
+}
+.page_1 h1{
+    padding-top:2.5em;
+    font-size: 90px;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', cursive;
+    color:var(--main-color);
     
 }
-.home_left {
-    background-color: aquamarine;
-    height: 500px;
-    width: 50%;
+.page_1 h1 span{
+
+    color:lightcoral;
+    font-family: 'Bebas Neue', cursive;
 }
-.home_right {
-    background-color:gold;
-    height: 500px;
-    width: 50%;
+.page_2{
+    width:60%;
+    margin: auto;
+    height: 20em;
 }
-@keyframes scale {
-100%{
-      transform: scale(1);
+.page_2 h1{
+    font-family: 'Bebas Neue', cursive;
+    color:var(--main-color);
+    font-size: 30px;
 }
+.page_2 p{
+    color:var(--text-color);
 }
-.container h1 span {
-    opacity: 0;
-    filter: blur(4px);
-    font-size: 2.5em;
-    color: darkblue;
-    display:flex;
-    text-align: center;
-} 
-h1 {
-    max-width: 40ch;
-    transform: scale(0.94);
-    animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+.page_2 p span{
+    font-size: 30px;
+    color: var(--main-color);
 }
-span:nth-child(1) {
-    animation: fade-in 1s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+.page_3 {
+    margin-bottom: 50px;
+    height: auto;
 }
-@keyframes fade-in {
-    100% {
-      opacity: 1;
-      filter: blur(0);
-    }
+.page_3 h1,.page_4 h1{
+    color:var(--text-color);
+    
+    text-transform: uppercase;
+    margin-bottom: 2em;
+    box-sizing: border-box;
+    box-shadow: 0px 1.5px 0px 0px rgba(185,30,4,0.5);
 }
+.page_3 h1 span,
+.page_4 h1 span {
+    color:var(--main-color);
+    font-size: 2em;
+}
+.works{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.5em;
+    align-items: center;
+    gap:2em;
+}
+.img{
+    width: 65%;
+}
+.work_2 .img
+{
+    padding-left: 30%;
+}
+.img img {
+    width: 100%;
+    height:100%;
+    object-fit:contain;
+    border-radius: 20px;
+}
+
